@@ -10,11 +10,16 @@ import org.springframework.web.bind.annotation.RestController;
 public class FeignController {
 
     @Autowired
-    FeignService feignService;
+    FeignService feignService;//启动时注入，编译器不识别属于正常
 
     @GetMapping(value = "/hi")
     public String sayHi(@RequestParam String name) {
         return feignService.sayHiFromClientOne( name );
+    }
+
+    @GetMapping(value = "/query")
+    public String sayID(@RequestParam String name) {
+        return feignService.getID( name );
     }
 
 }

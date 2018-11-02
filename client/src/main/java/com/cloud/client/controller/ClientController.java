@@ -16,4 +16,9 @@ public class ClientController {
     public String home(@RequestParam(value = "name", defaultValue = "Tom") String name) {
         return "hi " + name + " ,i am from port:" + port;
     }
+
+    @RequestMapping("/getID")
+    public String home1(@RequestParam(value = "name", defaultValue = "Tom") String name) {
+        return "you are" + name + ", your id is "+ 3 +" !result from port:" + port;
+    }
 }

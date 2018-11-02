@@ -10,4 +10,7 @@ public interface FeignService {
 
     @RequestMapping(value = "/hi",method = RequestMethod.GET)
     String sayHiFromClientOne(@RequestParam(value = "name") String name);
+
+    @RequestMapping(value = "/getID",method = RequestMethod.GET)
+    String getID(@RequestParam(value = "name") String name);
 }
