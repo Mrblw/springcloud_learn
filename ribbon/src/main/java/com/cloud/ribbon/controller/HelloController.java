@@ -12,9 +12,9 @@ public class HelloController {
     @Autowired
     HelloService helloService;
 
-    @GetMapping(value = "/test")
+    @GetMapping(value = "/hi")
     public String hi(@RequestParam String name) {
-        return helloService.hiService( name );
+        return helloService.hiService( name ) + "ribbon";
     }
 
 }
